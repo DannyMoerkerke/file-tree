@@ -33,7 +33,7 @@ header .github {
   display: block;
   width: 32px;
   height: 32px;
-  background: url("demo/svg/github.svg");
+  background: url("/demo/svg/github.svg");
   cursor: pointer;
 }
 

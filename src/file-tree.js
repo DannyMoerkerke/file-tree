@@ -1,6 +1,6 @@
-import '../node_modules/@dannymoerkerke/material-webcomponents/src/material-loader.js';
-import '../node_modules/@dannymoerkerke/material-webcomponents/src/material-dialog.js';
-import '../node_modules/@dannymoerkerke/material-webcomponents/src/material-button.js';
+import '/node_modules/@dannymoerkerke/material-webcomponents/src/material-loader.js';
+import '/node_modules/@dannymoerkerke/material-webcomponents/src/material-dialog.js';
+import '/node_modules/@dannymoerkerke/material-webcomponents/src/material-button.js';
 import './context-menu.js';
 import {onOutsideClick, removeOutsideClick} from './on-outside-click.js';
 
