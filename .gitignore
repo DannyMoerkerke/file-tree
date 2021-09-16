@@ -1,3 +1,2 @@
-node_modules/*
-!node_modules/@dannymoerkerke/
+node_modules/
 .idea

@@ -1,15 +1,10 @@
-import '../node_modules/@dannymoerkerke/material-webcomponents/src/material-loader.js';
-import '../node_modules/@dannymoerkerke/material-webcomponents/src/material-dialog.js';
-import '../node_modules/@dannymoerkerke/material-webcomponents/src/material-button.js';
+import './material-loader.js';
+import './material-dialog.js';
+import './material-button.js';
 import './context-menu.js';
 import {onOutsideClick, removeOutsideClick} from './on-outside-click.js';
 
 export class FileTree extends HTMLElement {
-
-  static get observedAttributes() {
-    return [];
-  }
-
   constructor() {
     super();
 
