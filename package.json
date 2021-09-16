@@ -2,6 +2,11 @@
   "name": "file-tree",
   "version": "0.0.1",
   "description": "A file tree web component using the File System Access API",
+  "homepage": "https://dannymoerkerke.github.io/file-tree",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:DannyMoerkerke/file-tree.git"
+  },
   "main": "dist/file-tree.js",
   "module": "dist/file-tree.es.js",
   "unpkg": "dist/file-tree.umd.js",
