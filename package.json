@@ -2,17 +2,21 @@
   "name": "file-tree",
   "version": "0.0.1",
   "description": "A file tree web component using the File System Access API",
-  "main": "src/file-tree.js",
+  "main": "dist/file-tree.js",
+  "module": "dist/file-tree.es.js",
+  "unpkg": "dist/file-tree.umd.js",
   "type": "module",
   "publishConfig": {
     "access": "public"
   },
   "files": [
-    "/src"
+    "/dist"
   ],
   "scripts": {
     "start": "ws -p 8100 --spa index.html",
-    "test": "ws -p 8888 --spa test/index.html"
+    "test": "ws -p 8888 --spa test/index.html",
+    "build": "rollup -c",
+    "prepare": "npm run build"
   },
   "author": "Danny Moerkerke <danny@dannymoerkerke.nl>",
   "license": "ISC",
@@ -23,6 +27,8 @@
     "chai": "^4.3.4",
     "local-web-server": "^5.1.1",
     "mocha": "^9.1.1",
+    "rollup": "^2.56.3",
+    "rollup-plugin-babel-minify": "^10.0.0",
     "sinon": "^11.1.2"
   }
 }

@@ -7,7 +7,7 @@ const outlet = document.querySelector('#content');
 
 router(outlet, [
   {
-    url: '/',
+    url: '/file-tree/',
     template: index,
     controller() {
       const fileContent = document.querySelector('#file-content');
@@ -144,11 +144,11 @@ router(outlet, [
     }
   },
   {
-    url: '/getting-started',
+    url: '/file-tree/getting-started',
     template: gettingStarted
   },
   {
-    url: '/documentation',
+    url: '/file-tree/documentation',
     template: documentation
   }
 ]);
