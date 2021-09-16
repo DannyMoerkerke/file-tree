@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon/micro/chevron/right</title>
+    <g id="dir-arrow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <polygon id="background" points="0 0 16 0 16 16 0 16"></polygon>
+        <polygon id="shape" fill="#000000" points="6 11.06 9.09041835 8 6 4.94 6.951417 4 11 8 6.951417 12"></polygon>
+    </g>
+</svg>

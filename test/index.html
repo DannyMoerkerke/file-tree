@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>file-tree test</title>
+        <script src="../node_modules/sinon/pkg/sinon.js"></script>
+        <script src="../node_modules/chai/chai.js"></script>
+        <script src="../node_modules/mocha/mocha.js"></script>
+
+        <script>
+            window.expect = chai.expect;
+            window.assert = chai.assert;
+            mocha.setup('bdd');
+        </script>
+        <script type="module" src="test/file-tree.test.js"></script>
+        <script type="module">
+            mocha.run();
+        </script>
+
+        <link rel="stylesheet" href="../node_modules/mocha/mocha.css">
+    </head>
+    <body>
+        <div id="mocha"></div>
+
+    </body>
+</html>

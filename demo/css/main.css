@@ -1,0 +1,259 @@
+:root {
+  --main-color: rgb(0, 188, 212);
+  --font-color: #343434;
+}
+body {
+  min-height: 100vh;
+  font-family: Roboto, Arial,serif;
+  margin: 0;
+  background-color: #fafafa;
+  color: var(--font-color);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 5px 15px;
+  background-color: var(--main-color);
+  box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2), 0px 6px 10px 0px rgba(0,0,0,0.14), 0px 1px 18px 0px rgba(0,0,0,0.12);
+  color: #ffffff;
+}
+
+header h1 {
+  margin-left: 20px;
+  flex-grow: 1;
+}
+
+header i.material-icons {
+  font-size: 3rem;
+}
+
+header .github {
+  display: block;
+  width: 32px;
+  height: 32px;
+  background: url("/demo/svg/github.svg");
+  cursor: pointer;
+}
+
+file-tree {
+  --font-family: Roboto, Arial;
+  --font-size: 1rem;
+  --hover-color: rgba(2, 147, 232, 0.3);
+  --hover-font-color: #000000;
+  --selected-color: #0293e8;
+  --selected-font-color: #ffffff;
+  --padding-dir: 0 3px;
+  --padding-file: 6px 6px;
+  flex-basis: 12%;
+  margin-top: 20px;
+}
+
+button {
+  padding: 8px 12px;
+  width: 135px;
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  background-color: var(--main-color);
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+main {
+  display: flex;
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding-left: 20px;
+}
+
+#intro {
+  padding: 0 20px 20px 0;
+}
+
+#file-container {
+  display: flex;
+  justify-content: space-between;
+  min-height: 100px;
+}
+
+#file-preview {
+  display: none;
+}
+
+#menu ul {
+  list-style-type: none;
+  margin: 20px 0 0 10px;
+}
+
+#menu ul li {
+  padding: 5px;
+}
+
+#menu ul li a {
+  text-decoration: none;
+  color: var(--font-color);
+}
+
+#menu ul li a:hover {
+  text-decoration: none;
+  color: var(--main-color);
+}
+
+@media screen and (min-width: 1024px) {
+  #menu {
+    flex-basis: 10%;
+    min-height: 100vh;
+    background-color: #ffffff;
+  }
+
+  #file-container {
+    min-height: 70vh;
+    flex-grow: 1;
+  }
+
+  #file-preview {
+    display: flex;
+    flex-basis: 50%;
+    flex-direction: column;
+    min-height: 150px;
+    margin-top: 20px;
+  }
+
+  #file-preview .buttons {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #file-preview #save-button {
+    margin-right: 10px;
+  }
+
+  #search {
+    display: flex;
+    flex-basis: 30%;
+    flex-direction: column;
+    min-height: 150px;
+    margin-top: 20px;
+    overflow: scroll;
+  }
+
+  #search-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  #search .controls {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #search-results {
+    max-height: 100vh;
+    overflow: scroll;
+  }
+
+  #search-type {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+  }
+}
+
+#file-content {
+  padding: 10px;
+  margin-top: 20px;
+  border: 1px solid #cecece;
+  height: 100%;
+}
+
+#file-content textarea {
+  width: 100%;
+  height: 100%;
+  border: none;
+  resize: none;
+  outline: none;
+}
+
+#file-content img,
+#file-content svg {
+  max-width: 100%;
+}
+
+[disabled] {
+  opacity: .5;
+  cursor: not-allowed;
+}
+
+ul {
+  list-style-type: none;
+  padding: 5px;
+}
+
+ul li {
+  padding: 5px;
+  cursor: pointer;
+  line-height: 1.8rem;
+  margin-bottom: 5px;
+}
+
+ul li p {
+  margin: 5px;
+  font-size: .9rem;
+}
+
+ul li span.path {
+  display: inline-block;
+  margin-left: 8px;
+  color: #cecece;
+}
+
+.highlight {
+  font-weight: bold;
+  background-color: #cccccc;
+}
+
+input[type="radio"] {
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin-right: 6px;
+  white-space: nowrap;
+}
+
+input[type="text"] {
+  padding: 6px;
+  border-radius: 7px;
+  border: 1px solid #cccccc;
+}
+
+code, pre {
+  font-size: 1.1em;
+  font-family: monospace;
+}
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin: 20px 0 5px;
+}
+
+
