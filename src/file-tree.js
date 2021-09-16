@@ -103,7 +103,7 @@ export class FileTree extends HTMLElement {
           display: inline-block;
           width: var(--font-size);
           height: var(--font-size);
-          background: url("/src/svg/dir-arrow.svg");
+          background: url("src/svg/dir-arrow.svg");
           background-repeat: no-repeat;
           background-size: var(--font-size) var(--font-size);
           transform: rotate(0deg);
@@ -510,15 +510,10 @@ export class FileTree extends HTMLElement {
     const iterateWorker = new Worker(webWorkerUrl);
 
     iterateWorker.addEventListener('message', ({data}) => {
-      console.log('message from worker', data);
-      console.timeEnd('iterate');
-
       this.currentDirectory = data;
 
       this.dispatchEvent(new CustomEvent('indexed'));
     });
-
-    console.time('iterate');
 
     const payload = {
       handle: this.currentDirectoryHandle,
@@ -541,9 +536,6 @@ export class FileTree extends HTMLElement {
       const iterateWorker = new Worker(webWorkerUrl);
 
       iterateWorker.addEventListener('message', ({data}) => {
-        console.log('message from worker', data);
-        console.timeEnd('iterate');
-
         this.currentDirectory = data;
         resolve(data);
       });
@@ -553,7 +545,6 @@ export class FileTree extends HTMLElement {
         reject(e);
       });
 
-      console.time('iterate');
       const payload = {
         handle: this.currentDirectoryHandle,
         ignoredDirectories: this.ignoredDirectories,
