@@ -505,9 +505,7 @@ export class FileTree extends HTMLElement {
       entries: {}
     };
 
-    const webWorkerUrl = new URL('/src/iterateWorker.js', window.location.origin).toString();
-
-    console.log(webWorkerUrl);
+    const webWorkerUrl = 'src/iterateWorker.js';
 
     const iterateWorker = new Worker(webWorkerUrl);
 
@@ -539,7 +537,7 @@ export class FileTree extends HTMLElement {
         entries: {}
       };
 
-      const webWorkerUrl = new URL('/src/iterateWorker.js', window.location.origin).toString();
+      const webWorkerUrl = 'src/iterateWorker.js';
       const iterateWorker = new Worker(webWorkerUrl);
 
       iterateWorker.addEventListener('message', ({data}) => {
