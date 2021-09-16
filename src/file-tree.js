@@ -103,7 +103,7 @@ export class FileTree extends HTMLElement {
           display: inline-block;
           width: var(--font-size);
           height: var(--font-size);
-          background: url(/src/svg/dir-arrow.svg);
+          background: url("/src/svg/dir-arrow.svg");
           background-repeat: no-repeat;
           background-size: var(--font-size) var(--font-size);
           transform: rotate(0deg);
@@ -505,7 +505,7 @@ export class FileTree extends HTMLElement {
       entries: {}
     };
 
-    const iterateWorker = new Worker('./src/iterateWorker.js');
+    const iterateWorker = new Worker('/src/iterateWorker.js');
 
     iterateWorker.addEventListener('message', ({data}) => {
       console.log('message from worker', data);
@@ -535,7 +535,7 @@ export class FileTree extends HTMLElement {
         entries: {}
       };
 
-      const iterateWorker = new Worker('./src/iterateWorker.js');
+      const iterateWorker = new Worker('/src/iterateWorker.js');
 
       iterateWorker.addEventListener('message', ({data}) => {
         console.log('message from worker', data);
