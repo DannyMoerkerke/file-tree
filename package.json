@@ -1,5 +1,5 @@
 {
-  "name": "file-tree",
+  "name": "@dannymoerkerke/file-tree",
   "version": "0.0.1",
   "description": "A file tree web component using the File System Access API",
   "homepage": "https://dannymoerkerke.github.io/file-tree",
