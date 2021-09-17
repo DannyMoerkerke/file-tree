@@ -2,6 +2,10 @@ export const template = `
 <div id="intro">
   <h1>file-tree demo</h1>
   <p>
+    <code>&lt;file-tree&gt;</code> gives access to the file system of the user's device through the File System Access API.
+  </p>
+  <p>It is currently supported on desktop in Chrome 86+ and Edge86+.</p>
+  <p>
     Click the "Open directory" button below to select a directory of file. Click a file to open it in the preview.
   </p>
   <p>
