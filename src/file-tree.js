@@ -105,7 +105,7 @@ export class FileTree extends HTMLElement {
           display: inline-block;
           width: var(--font-size);
           height: var(--font-size);
-          background: url("src/svg/dir-arrow.svg");
+          background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4IiB2aWV3Qm94PSIwIDAgMTYgMTYiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8dGl0bGU+aWNvbi9taWNyby9jaGV2cm9uL3JpZ2h0PC90aXRsZT4KICAgIDxnIGlkPSJkaXItYXJyb3ciIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxwb2x5Z29uIGlkPSJiYWNrZ3JvdW5kIiBwb2ludHM9IjAgMCAxNiAwIDE2IDE2IDAgMTYiPjwvcG9seWdvbj4KICAgICAgICA8cG9seWdvbiBpZD0ic2hhcGUiIGZpbGw9IiMwMDAwMDAiIHBvaW50cz0iNiAxMS4wNiA5LjA5MDQxODM1IDggNiA0Ljk0IDYuOTUxNDE3IDQgMTEgOCA2Ljk1MTQxNyAxMiI+PC9wb2x5Z29uPgogICAgPC9nPgo8L3N2Zz4K");
           background-repeat: no-repeat;
           background-size: var(--font-size) var(--font-size);
           transform: rotate(0deg);
