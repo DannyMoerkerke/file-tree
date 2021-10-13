@@ -1,6 +1,6 @@
 {
   "name": "@dannymoerkerke/file-tree",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A file tree web component using the File System Access API",
   "homepage": "https://dannymoerkerke.github.io/file-tree",
   "repository": {

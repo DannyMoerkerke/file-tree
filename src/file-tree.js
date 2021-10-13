@@ -2,6 +2,8 @@ import './material-loader.js';
 import './material-dialog.js';
 import './material-button.js';
 import './context-menu.js';
+import {worker} from './iterateWorker.js';
+
 import {onOutsideClick, removeOutsideClick} from './on-outside-click.js';
 
 export class FileTree extends HTMLElement {
@@ -505,9 +507,7 @@ export class FileTree extends HTMLElement {
       entries: {}
     };
 
-    const webWorkerUrl = 'src/iterateWorker.js';
-
-    const iterateWorker = new Worker(webWorkerUrl);
+    const iterateWorker = new Worker(worker);
 
     iterateWorker.addEventListener('message', ({data}) => {
       this.currentDirectory = data;
@@ -532,8 +532,7 @@ export class FileTree extends HTMLElement {
         entries: {}
       };
 
-      const webWorkerUrl = 'src/iterateWorker.js';
-      const iterateWorker = new Worker(webWorkerUrl);
+      const iterateWorker = new Worker(worker);
 
       iterateWorker.addEventListener('message', ({data}) => {
         this.currentDirectory = data;
