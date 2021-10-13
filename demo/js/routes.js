@@ -54,7 +54,7 @@ router(outlet, [
 
         if(term.trim() !== '') {
           const {results} = searchType === 'files' ? fileTree.findFile(term) : await fileTree.findInFiles(term);
-          console.log(results);
+
           const listFoundFiles = (list, {path, highlight}) => {
             list.insertAdjacentHTML('beforeend', `<li data-path="${path}">${highlight[1]} <span class="path">${highlight[0]}</span></li>`);
 

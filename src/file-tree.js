@@ -105,9 +105,11 @@ export class FileTree extends HTMLElement {
           display: inline-block;
           width: var(--font-size);
           height: var(--font-size);
-          background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4IiB2aWV3Qm94PSIwIDAgMTYgMTYiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8dGl0bGU+aWNvbi9taWNyby9jaGV2cm9uL3JpZ2h0PC90aXRsZT4KICAgIDxnIGlkPSJkaXItYXJyb3ciIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxwb2x5Z29uIGlkPSJiYWNrZ3JvdW5kIiBwb2ludHM9IjAgMCAxNiAwIDE2IDE2IDAgMTYiPjwvcG9seWdvbj4KICAgICAgICA8cG9seWdvbiBpZD0ic2hhcGUiIGZpbGw9IiMwMDAwMDAiIHBvaW50cz0iNiAxMS4wNiA5LjA5MDQxODM1IDggNiA0Ljk0IDYuOTUxNDE3IDQgMTEgOCA2Ljk1MTQxNyAxMiI+PC9wb2x5Z29uPgogICAgPC9nPgo8L3N2Zz4K");
-          background-repeat: no-repeat;
-          background-size: var(--font-size) var(--font-size);
+          mask-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4IiB2aWV3Qm94PSIwIDAgMTYgMTYiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8dGl0bGU+aWNvbi9taWNyby9jaGV2cm9uL3JpZ2h0PC90aXRsZT4KICAgIDxnIGlkPSJkaXItYXJyb3ciIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxwb2x5Z29uIGlkPSJiYWNrZ3JvdW5kIiBwb2ludHM9IjAgMCAxNiAwIDE2IDE2IDAgMTYiPjwvcG9seWdvbj4KICAgICAgICA8cG9seWdvbiBpZD0ic2hhcGUiIGZpbGw9IiMwMDAwMDAiIHBvaW50cz0iNiAxMS4wNiA5LjA5MDQxODM1IDggNiA0Ljk0IDYuOTUxNDE3IDQgMTEgOCA2Ljk1MTQxNyAxMiI+PC9wb2x5Z29uPgogICAgPC9nPgo8L3N2Zz4K");
+          mask-size: var(--font-size);
+          -webkit-mask-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4IiB2aWV3Qm94PSIwIDAgMTYgMTYiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8dGl0bGU+aWNvbi9taWNyby9jaGV2cm9uL3JpZ2h0PC90aXRsZT4KICAgIDxnIGlkPSJkaXItYXJyb3ciIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxwb2x5Z29uIGlkPSJiYWNrZ3JvdW5kIiBwb2ludHM9IjAgMCAxNiAwIDE2IDE2IDAgMTYiPjwvcG9seWdvbj4KICAgICAgICA8cG9seWdvbiBpZD0ic2hhcGUiIGZpbGw9IiMwMDAwMDAiIHBvaW50cz0iNiAxMS4wNiA5LjA5MDQxODM1IDggNiA0Ljk0IDYuOTUxNDE3IDQgMTEgOCA2Ljk1MTQxNyAxMiI+PC9wb2x5Z29uPgogICAgPC9nPgo8L3N2Zz4K");
+          -webkit-mask-size: var(--font-size);
+          background-color: var(--font-color);
           transform: rotate(0deg);
         }
         
@@ -177,6 +179,8 @@ export class FileTree extends HTMLElement {
     this.filesToIndex = ['txt', 'js', 'ts', 'css', 'html', 'json'];
     this.openDirs = new Set();
     this.fileList = this.shadowRoot.querySelector('#filelist');
+    this.fileContainer = this.shadowRoot.querySelector('#file-container');
+
     this.confirmDialog = this.shadowRoot.querySelector('#confirm-dialog');
     this.confirmCancelButton = this.shadowRoot.querySelector('#confirm-dialog-cancel');
     this.confirmOkButton = this.shadowRoot.querySelector('#confirm-dialog-ok');
@@ -274,9 +278,8 @@ export class FileTree extends HTMLElement {
     }
   }
 
-  async openFileHandle(handle) {
+  async openFileHandle({path, handle}) {
     this.currentFileHandle = handle;
-    const path = handle.name;
 
     await this.getReadWritePermission(handle);
 
@@ -566,7 +569,7 @@ export class FileTree extends HTMLElement {
 
       if(handle) {
         try {
-          await this.openFileHandle(handle);
+          await this.openFileHandle({path, handle});
           this.highlightFile(filePath);
         }
         catch(e) {
@@ -784,7 +787,10 @@ export class FileTree extends HTMLElement {
 
           if(isFile) {
             this.selectedFileElement = this.shadowRoot.querySelector(`li[data-file="${path}"]`);
-            this.selectedFileElement.scrollIntoView({behavior: 'smooth', block: 'center'});
+
+            if(!this.elementIsInView(this.selectedFileElement)) {
+              this.fileContainer.scrollTop = this.selectedFileElement.offsetTop;
+            }
           }
           else {
             this.openDirs.add(path);
@@ -799,6 +805,12 @@ export class FileTree extends HTMLElement {
         return acc;
       }, parts.slice(0, 1));
     }
+  }
+
+  elementIsInView(element) {
+    const {top, bottom} = element.getBoundingClientRect();
+
+    return top >= 0 && bottom <= (window.innerHeight || document.documentElement.clientHeight);
   }
 
   unhighlightFile(filePath) {
